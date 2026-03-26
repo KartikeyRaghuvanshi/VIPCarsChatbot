@@ -31,29 +31,25 @@
 
 		<!-- Salesforce Embedded Messaging Chat Code Snippet -->
 		<script type='text/javascript'>
-			function initEmbeddedMessaging() {
-				try {
-					embeddedservice_bootstrap.settings.language = 'en_US';
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-					embeddedservice_bootstrap.init(
-						'00Df600000G7gVx',
-						'VipCars',
-						'https://enterprise-force-4968.my.site.com/ESWVipCars1768309160177',
-						{
-							scrt2URL: 'https://enterprise-force-4968.my.salesforce-scrt.com'
-						}
-					);
-				} catch (err) {
-					console.error('Error loading Embedded Messaging: ', err);
+			embeddedservice_bootstrap.init(
+				'00DBi000003OeAg',
+				'VIPCars_Service_agent',
+				'https://enterprise-force-4968--dev.sandbox.my.site.com/ESWVIPCarsServiceagent1769208537342',
+				{
+					scrt2URL: 'https://enterprise-force-4968--dev.sandbox.my.salesforce-scrt.com'
 				}
-			};
-		</script>
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://enterprise-force-4968--dev.sandbox.my.site.com/ESWVIPCarsServiceagent1769208537342/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-		<script
-			type='text/javascript'
-			src='https://enterprise-force-4968.my.site.com/ESWVipCars1768309160177/assets/js/bootstrap.min.js'
-			onload='initEmbeddedMessaging()'>
-		</script>
 
 	</body>
 	</html>
